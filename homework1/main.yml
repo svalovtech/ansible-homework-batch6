@@ -1,0 +1,17 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install a list of packages
+    ansible.builtin.apt:
+      pkg:
+        - unzip
+        - mariadb-client
+        - mariadb-server
+      state: present
+      update_cache: yes
+
+  - name: Start service mariadb-client, if not started
+    ansible.builtin.service:
+      name: mariadb
+      state: started
+      enabled: yes     
