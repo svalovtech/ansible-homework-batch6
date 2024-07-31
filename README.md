@@ -1,0 +1,1 @@
+# ansible-homework-batch6
