@@ -4,8 +4,7 @@
   - name: Copy local files to remote machine
     ansible.builtin.copy:
       src: /home/ubuntu/ansible-homework-batch6/homework4
-      dest: ./homework4-copy
+      dest: ./homework4-copy/
       owner: tim
       group: devops
       mode: '0755'
-      recurse: yes 
