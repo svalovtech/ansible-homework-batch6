@@ -1,0 +1,22 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install apache httpd
+    ansible.builtin.dnf:
+      name: httpd
+      state: present
+      update_cache: yes
+    notify: Install git
+
+  - name: Start httpd service
+    service:
+      name: httpd
+      state: started
+      enabled: yes  
+
+  handlers:
+  - name: Install git
+    ansible.builtin.dnf:
+      name: httpd
+      state: present
+      update_cache: yes    
