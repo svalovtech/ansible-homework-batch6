@@ -19,8 +19,8 @@
       state: present    
       update_cache: yes    
 
-  - name: Start service mariadb-client
+  - name: Start mariadb service
     ansible.builtin.service:
-      name: mariadb-client
+      name: mariadb
       state: started
       enabled: yes     
