@@ -1,3 +1,24 @@
+
+# Download terraform:
+#    type in your terminal <wget https://releases.hashicorp.com/terraform/1.9.4/terraform_1.9.4_linux_amd64.zip>
+#    type (run) <ls>
+# Copy from ls "terraform_1.9.4_linux_amd64.zip"
+# Install unzip :
+#    type <sudo apt install unzip>
+#    type <unzip terraform_1.9.4_linux_amd64.zip>
+#    run <ls>
+# Check for execution permission   
+#    run <ls -l> 
+# If not 
+#    type <chmod +x terraform>
+# Move terraform in binary folder 
+#    type <sudo mv terraform /usr/local/bin>
+# Check if it's  in binary folder 
+#     run <terraform version>
+# Delete zip file 
+#     type <sudo rm -rf terraform_1.9.4_linux_amd64.zip>
+# Create IAM role and modify your AIM-role
+
 terraform {
   required_providers {
     aws = {
