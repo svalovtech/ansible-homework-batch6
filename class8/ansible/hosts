@@ -1,0 +1,10 @@
+monitoring ansible_host=10.10.10.10
+
+
+
+
+
+# type <cd terraform>
+# type <terraform output -raw ec2>
+# type <IP=$(terraform output -raw ec2)
+# type <echo $IP>
