@@ -1,0 +1,30 @@
+- name: Install mysql  (state=present is optional)
+  ansible.builtin.apt:
+    name: mysql-server
+    state: present
+
+- name: Install PyMySQL  (state=present is optional)
+  ansible.builtin.apt:
+    name: python3-pymysql
+    state: present    
+
+- name: Start mysql
+  ansible.builtin.service:
+    name: mysql
+    state: started 
+    enabled: yes   
+
+- name: Create  database 
+  community.mysql.mysql_db:
+    name: kaizen
+    state: present
+    login_unix_socket: /run/mysqld/mysqld.sock    
+
+- name: Create user
+  community.mysql.mysql_user:
+    name: hello
+    password: world123
+    priv: '*.*:ALL'
+    state: present   
+    login_unix_socket: /run/mysqld/mysqld.sock   
+# tasks file for Mysql

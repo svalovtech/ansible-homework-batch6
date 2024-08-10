@@ -1,0 +1,7 @@
+ubuntu-ohio ansible_host=18.223.241.127
+ubuntu-virginia ansible_host=3.85.163.88
+ubuntu-california ansible_host=52.53.200.215
+ubuntu-oregon ansible_host=52.42.152.10
+
+# type for ping pong <ansible all -m ping -i hosts>
+# type fore role <ansible-galaxy init (name role)>
