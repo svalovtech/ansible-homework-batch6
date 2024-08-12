@@ -1,2 +1,4 @@
----
 # vars file for Mysql
+mysql_database: kaizen
+mysql_user: hello
+mysql_password: world123

@@ -1,2 +1,4 @@
----
 # defaults file for Wordpress
+wordpress_user: www-data
+wordpress_group: www-data
+

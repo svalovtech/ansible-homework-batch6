@@ -1,0 +1,31 @@
+#                             Dynamic inventory                           
+# type for dynamic <sudo apt install python3-pip>   for dynamic inventory in aws 
+# after instal pip you need run <pip install boto3>
+# then type <pip show boto3>
+# and type <pip show botocore>
+                                                                    # REQUIREMENTS: 
+                                                                                    #python >= 3.6
+                                                                                    #boto3 >= 1.26.0
+                                                                                    #botocore >= 1.29.0
+# Synopsis
+# Get inventory hosts from Amazon Web Services EC2.
+
+# The inventory file is a YAML configuration file and must end with aws_ec2.{yml|yaml}  . Example: hosts.aws_ec2.yml  .
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-east-1
+  - us-east-2
+  - us-west-1
+  - us-west-2
+
+filters:
+  tag:Name:
+    - ohio
+    - virginia
+    - california
+    - oregon
+
+
+#Check for permission and modify role or create role . Go to your AWS account and assign role {click >> action  >> security >> modify role } and choose role if you have it full permision role or role for dynamic'
+  # type to check <ansible-inventory -i hosts.aws_ec2.yml --list>
+  #type to check <ansible-inventory -i hosts.aws_ec2.yml --graph> just to see ec2-machines

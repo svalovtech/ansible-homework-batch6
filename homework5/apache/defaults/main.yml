@@ -1,2 +1,2 @@
-package: apache2
+apache_package: apache2
 # defaults file for Apache

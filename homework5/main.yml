@@ -2,6 +2,6 @@
   become: yes
   roles:
     - apache
-    - mysql
     - php
     - wordpress
+    - mysql

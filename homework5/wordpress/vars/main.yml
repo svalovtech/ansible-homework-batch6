@@ -1,2 +1,3 @@
----
 # vars file for Wordpress
+wordpress_url: https://wordpress.org/latest.tar.gz
+wordpress_dest: /tmp/wordpress.tar.gz

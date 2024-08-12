@@ -14,17 +14,17 @@
     state: started 
     enabled: yes   
 
-- name: Create  database 
+- name: Create Database
   community.mysql.mysql_db:
-    name: kaizen
+    name: "{{ mysql_database }}"
     state: present
-    login_unix_socket: /run/mysqld/mysqld.sock    
+    login_unix_socket: /run/mysqld/mysqld.sock
 
-- name: Create user
+- name: Create MySQL User
   community.mysql.mysql_user:
-    name: hello
-    password: world123
+    name: "{{ mysql_user }}"
+    password: "{{ mysql_password }}"
     priv: '*.*:ALL'
-    state: present   
-    login_unix_socket: /run/mysqld/mysqld.sock   
+    state: present
+    login_unix_socket: /run/mysqld/mysqld.sock
 # tasks file for Mysql
